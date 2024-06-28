@@ -9,6 +9,7 @@ var swiper = new Swiper(".mySwiper", {
       delay:7000,
       // disableOnInteraction: true,
     },
+    loop: true,
   });
 
 
@@ -24,5 +25,6 @@ var swiper = new Swiper(".mySwiper2", {
       delay:6000,
       // disableOnInteraction: true,
     },
+    loop: true,
 
   });
