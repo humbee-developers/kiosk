@@ -261,7 +261,7 @@ body {
   .second_page_outer {
     height: 100vh;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .second_page_upper1 {

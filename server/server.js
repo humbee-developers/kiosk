@@ -58,7 +58,7 @@ app.post("/secondmail", (req, res) => {
           pass: "wecdoqzwxfcifkss",
         },
       });
-
+    //   ira.humbee@gmail.com
       const mailOption = {
         from: "ira.humbee@gmail.com", 
         to: "ira.humbee@gmail.com",
