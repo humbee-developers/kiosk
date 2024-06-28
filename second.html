@@ -33,10 +33,12 @@
 
 
 
-      <div class="one">
+      <button button id="openPopup" class="one">
         <span class="span"></span>
         <a href="" class="ex">Click Me</a>
-      </div>
+      </button>
+
+      
 
 
   </div>
@@ -64,10 +66,10 @@
       </div>
  
       
-      <div class="one">
+      <button button id="openPopup" class="one">
         <span class="span"></span>
         <a href="#" class="ex">Register Now</a>
-      </div>
+      </button>
 
   </div>
 
@@ -79,6 +81,8 @@
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./second_page.js"></script>
+
+<script> document.getElementById('openPopup').addEventListener('click', function() { window.open('popupForm.html', 'popupWindow', 'width=600,height=400,scrollbars=yes'); });
    <!-- Initialize Swiper -->
 </body>
 </body>
