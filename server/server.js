@@ -60,8 +60,8 @@ app.post("/secondmail", (req, res) => {
       });
 
       const mailOption = {
-        from: "meetchauhan1999@gmail.com", //
-        to: email,
+        from: "ira.humbee@gmail.com", 
+        to: "ira.humbee@gmail.com",
         subject: "Email Test",
         html: `
         <p>New Inquiry Form from this site </p>
