@@ -29,7 +29,18 @@ input{
     font-size: 20px;
     border: 1px solid black;
     border-radius: 5px;
+    outline: none;
 }
 input:focus{
     outline: none;
+}
+.selectric {
+  border: 1px solid #000 !important;
+  border-radius: 0px;
+  background: #fff !important;
+  position: relative;
+  overflow: hidden;
+}
+.selectric-hover .selectric{
+  background-color: #fff !important;
 }
