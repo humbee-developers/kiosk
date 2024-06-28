@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./popupForm.css" />
+    <!-- <link rel="stylesheet" href="./selectric.css"> -->
+    <!-- <script src="./custom.js"></script> -->
+    <!-- <script src="./jquery.selectric.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-selectric/1.13.0/selectric.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-selectric/1.13.0/jquery.selectric.min.js"></script>
+    <script src="./jquery.selectric.js"></script>
+    <!-- <link rel="stylesheet" href="./selectric.scss"> -->
+    <link rel="stylesheet" href="./selectric.css" />
+  </head>
+  <body>
+    <div class="popupForm">
+      <div class="popupForm_wrapper">
+        <form id="myForm">
+          <div class="div">
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div class="div">
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="div">
+            <input type="number" name="phone" placeholder="Phone" required />
+          </div>
+          <div class="div">
+            <select name="category" required>
+              <option value="international_jobs">International Jobs</option>
+              <option value="vocational_training">Vocational Training</option>
+              <option value="profile_building_program">
+                Profile Building Program
+              </option>
+              <option value="career">Career</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="div">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      jQuery(document).ready(function(){
+        $('select').selectric()
+      })
+
+    </script>
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+      // document.querySelector('select').selectric();
+
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        const formData = new FormData(event.target);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        fetch('http://localhost:8000/secondmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(data => {
+          alert('Email sent successfully!');
+        })
+        .catch(error => {
+          alert('Error sending email: ' + error);
+        });
+      });
+    });
+    </script>
+  </body>
+</html>
