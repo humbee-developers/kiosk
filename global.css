@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "poppins_SemiBold";
+  src: url("./font/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "poppins_thin";
+  src: url("./font/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "poppins_Regular";
+  src: url("./font/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins_Medium";
+  src: url("./font/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "poppins_Light";
+  src: url("./font/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "poppins_Bold";
+  src: url("./font/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "poppins_ExtraBold";
+  src: url("./font/Poppins-ExtraBold.ttf");
+}
