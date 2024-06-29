@@ -1,20 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .popupForm {
-  
   display: none;
-  
 }
 .popupForm2 {
-  
   display: none;
-  
 }
-.form_field{
+.form_field {
   margin: 0 0 30px;
 }
 .popupForm_wrapper {
@@ -29,31 +25,30 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  
 }
-form{
-    width: 100% !important;
-    background-color: #fff;
-    padding: 70px 60px 50px;
-    border-radius: 0px;
-    position: relative;
+form {
+  width: 100% !important;
+  background-color: #fff;
+  padding: 70px 60px 50px;
+  border-radius: 0px;
+  position: relative;
 }
-input{
-    width: 100%;
-    padding: 10px 20px;
-    height: 50px;
-    color: #000;
-    font-size: 18px;
-    border: 1px solid black;
-    border-radius: 0px;
-    outline: none;
-    font-family: "poppins_Regular";
+input {
+  width: 100%;
+  padding: 10px 20px;
+  height: 50px;
+  color: #000;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none;
+  font-family: "poppins_Regular";
 }
-input::placeholder{
+input::placeholder {
   color: #444;
 }
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
 .selectric {
   border: 1px solid #000 !important;
@@ -63,12 +58,11 @@ input:focus{
   overflow: hidden;
   padding: 5px 0;
   border-radius: 0px !important;
-
 }
-.selectric::before{
+.selectric::before {
   content: "";
   position: absolute;
-  background-image: url('./assets/down_arrow.svg');
+  background-image: url("./assets/down_arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -79,24 +73,24 @@ input:focus{
   height: 20px;
   transition: all 0.4s;
 }
-.selectric-open .selectric::before{
+.selectric-open .selectric::before {
   transform: translateY(-50%) rotate(180deg);
 }
-b.button{
+b.button {
   display: none !important;
 }
-.selectric-hover .selectric{
+.selectric-hover .selectric {
   background-color: #fff !important;
 }
-.selectric span{
+.selectric span {
   font-size: 18px !important;
   font-family: "poppins_Regular";
 }
-.selectric .label{
+.selectric .label {
   margin: 0 !important;
   padding: 0 20px;
 }
-.selectric-scroll li{
+.selectric-scroll li {
   font-family: "poppins_Regular";
   font-size: 15px !important;
   color: #000 !important;
@@ -115,13 +109,13 @@ b.button{
   font-size: 15px;
   position: relative;
   overflow: hidden;
-  outline: 2px solid #489FB5;
+  outline: 2px solid #489fb5;
 }
 
 button.submit:hover {
   color: #ffffff;
   transform: scale(1.1);
-  box-shadow: 4px 5px 17px -4px #489FB5;
+  box-shadow: 4px 5px 17px -4px #489fb5;
 }
 
 button.submit::before {
@@ -131,7 +125,7 @@ button.submit::before {
   top: 0;
   width: 0;
   height: 100%;
-  background-color: #489FB5;
+  background-color: #489fb5;
   transform: skewX(45deg);
   z-index: -1;
   transition: width 1000ms;
@@ -140,21 +134,21 @@ button.submit::before {
 button.submit:hover::before {
   width: 250%;
 }
-.form_field.btn{
+.form_field.btn {
   text-align: center;
 }
-.popupForm.show_popup{
+.popupForm.show_popup {
   display: block;
 }
-.popupForm2.show_popup{
+.popupForm2.show_popup {
   display: block;
 }
-.close{
+.close {
   position: absolute;
   top: 5px;
   right: 5px;
 }
-.close img{
+.close img {
   width: 30px;
   height: 30px;
   /* background-color: #868383; */
@@ -163,28 +157,28 @@ button.submit:hover::before {
   cursor: pointer;
 }
 
-@media(max-width:991px){
+@media (max-width: 991px) {
   .popupForm_wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 100px
+    padding: 0 100px;
   }
 }
-@media(max-width:767px){
+@media (max-width: 767px) {
   .popupForm_wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 30px
+    padding: 0 30px;
   }
 }
-@media(max-width:575px){
-  form{
+@media (max-width: 575px) {
+  form {
     padding: 70px 20px 50px;
-}
+  }
 }
