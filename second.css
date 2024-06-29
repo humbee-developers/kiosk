@@ -55,20 +55,40 @@ body {
   height: 100vh;
 }
 
-video{
+/* video{
   height:100%;
-  width:auto;
+  width:100%;
+} */
+
+
+video{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
 }
 
+.video_container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+
 .second_page_upper1 {
-  height: 100vh;
-  width: 50%;
+  height: 100vh ;
+  width: 50% ;
   position: relative;
 }
 
 .second_page_upper2 {
-  height: 100vh;
-  width: 50%;
+  height: 100vh ;
+  width: 50% ;
 }
 
 .swiper-pagination-bullet {
@@ -191,7 +211,7 @@ video{
 @media (min-width: 1600px) and (max-width: 1920px) {
   .second_page_outer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row ;
   }
 
   @keyframes circleScale {
@@ -230,26 +250,42 @@ video{
   }
 
   .second_page_upper1 {
-    height: 100vh;
-    width: 50%;
+    height: 100vh ;
+    width: 50% ;
     position: relative;
   }
 
   .second_page_upper2 {
-    height: 100vh;
-    width: 50%;
+    height: 100vh ;
+    width: 50% ;
   }
 }
-
-@media (max-width: 2000px) and (max-height: 2200px) {
+/* @media (min-width: 2000px) and (max-width: 3000px) { */
+@media (max-width: 2000px) and (min-height: 2000px) {
   .swiper {
     width: 100%;
     height: 100%;
   }
 
-  video{
+  /* video{
     width:auto;
     height:auto;
+  } */
+
+
+  video{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    transform: translate(-50%, -50%);
+  }
+  .second_page_outer {
+    display: flex;
+    flex-direction: column ;
   }
 
   .swiper-slide {
@@ -271,7 +307,7 @@ video{
   .second_page_outer {
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
   }
 
   .second_page_upper1 {
