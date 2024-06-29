@@ -1,57 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./third.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./third.css" />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./popupForm.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-selectric/1.13.0/selectric.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-selectric/1.13.0/jquery.selectric.min.js"></script>
+    <script src="./jquery.selectric.js"></script>
+    <link rel="stylesheet" href="./selectric.css" />
+  </head>
+  <body>
     <div class="third_page_outer">
-        <div class="second_page_one">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1663954645420-f34df6dcd26e?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1719216324207-3b9727413913?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                  />
-                </div>
-                <div class="swiper-slide video_container">
-                  <video autoplay muted loop>
-                    <source
-                      src="./assets/4115456-uhd_2560_1440_30fps.mp4"
-                      type="video/mp4"
-                    />
-                  </video>
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://images.unsplash.com/photo-1718114885158-a3157f5fc443?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
+      <div class="second_page_one">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1663954645420-f34df6dcd26e?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
             </div>
-    
-            <button id="openPopup" class="one">
-              <span class="span"></span>
-              <a href="javascript:void(0)" class="ex">Click Me</a>
-            </button>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1719216324207-3b9727413913?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide video_container">
+              <video autoplay muted loop>
+                <source
+                  src="./assets/4115456-uhd_2560_1440_30fps.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1718114885158-a3157f5fc443?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <button id="openPopup" class="one">
+          <span class="span"></span>
+          <a href="javascript:void(0)" class="ex">Click Me</a>
+        </button>
+      </div>
     </div>
+    <div class="popupForm">
+      <div class="popupForm_wrapper">
+       
+        <form id="myForm">
+          <div class="form_image">
+            <img src="./assets/iraLogo.png" alt="iraLogo">
+          </div>
+          <div class="close"><img src="./assets/close.svg" alt="close"></div>
+          <div class="form_field">
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div class="form_field">
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="form_field">
+            <input type="number" name="phone" placeholder="Phone" required />
+          </div>
+          <div class="form_field">
+            <select name="category" required>
+              <option value="international_jobs">International Jobs</option>
+              <option value="vocational_training">Vocational Training</option>
+              <option value="profile_building_program">
+                Profile Building Program
+              </option>
+              <option value="career">Career</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="form_field btn">
+            <button class="button submit" type="submit">Submit</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      jQuery(document).ready(function(){
+        $('select').selectric()
+        $("#openPopup").click(function(){
+          $(".popupForm").addClass("show_popup")
+          
+        })
+        $("#openPopup2").click(function(){
+          $(".popupForm2").addClass("show_popup")
+          
+        })
+        $(".close").click(function(){
+          $(".popupForm").removeClass("show_popup")
+          $(".popupForm2").removeClass("show_popup")
+        })
+      })
+
+    </script>
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+      // document.querySelector('select').selectric();
+
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        const formData = new FormData(event.target);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        fetch('http://localhost:8000/secondmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(data => {
+          alert('Email sent successfully!');
+        })
+        .catch(error => {
+          alert('Error sending email: ' + error);
+        });
+      });
+
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./third.js"></script>
-</body>
+  </body>
 </html>

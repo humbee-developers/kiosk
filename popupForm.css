@@ -156,6 +156,23 @@ button.submit:hover::before {
   transition: all 0.4s;
   cursor: pointer;
 }
+.form_image{
+  text-align: center;
+  margin: 0 0 60px;
+}
+#myForm2 .form_image img{
+  width: 300px;
+}
+@media(max-width:1600px){
+  .form_image img{
+    width: 250px !important;
+  }
+}
+@media(max-width:1199px){
+  .form_image img{
+    width: 200px !important;
+  }
+}
 
 @media (max-width: 991px) {
   .popupForm_wrapper {
@@ -180,5 +197,8 @@ button.submit:hover::before {
 @media (max-width: 575px) {
   form {
     padding: 70px 20px 50px;
+  }
+  .form_image img{
+    width: 180px !important;
   }
 }
