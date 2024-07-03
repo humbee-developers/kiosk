@@ -28,3 +28,19 @@ var swiper = new Swiper(".mySwiper2", {
     loop: true,
 
   });
+
+
+
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   const exElement = document.querySelector('.one .ex');
+  //   const spanElement = document.querySelector('.one .span');
+  
+  //   exElement.addEventListener('mouseenter', function() {
+  //     spanElement.classList.add('hovered');
+  //   });
+  
+  //   exElement.addEventListener('mouseleave', function() {
+  //     spanElement.classList.remove('hovered');
+  //   });
+  // });
+  
